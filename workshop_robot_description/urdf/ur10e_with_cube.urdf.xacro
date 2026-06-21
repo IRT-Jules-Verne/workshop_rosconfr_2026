@@ -43,9 +43,8 @@
     -->
 
     <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
-    <xacro:include filename="$(find workshop_robot_description)/urdf/ur.ros2_control.xacro" />
 
-    <xacro:arg name="ur_type" default="ur30"/>
+    <xacro:arg name="ur_type" default="ur10e"/>
 
     <!-- parameters for ur -->
     <xacro:arg name="tf_prefix" default="" />
@@ -70,9 +69,10 @@
         safety_limits="$(arg safety_limits)"
         safety_pos_margin="$(arg safety_pos_margin)"
         safety_k_position="$(arg safety_k_position)"
-        force_abs_paths="$(arg force_abs_paths)"
+        generate_ros2_control_tag="true"
+        use_fake_hardware="true"
         >
-        <origin xyz="0 0 0.25" rpy="0 0 0" />         
+        <origin xyz="0 0 0.25" rpy="0 0 0" />
     </xacro:ur_robot>
 
     
@@ -112,12 +112,5 @@
         <child link="michel_link"/>
         <origin xyz="-0.2 0.5 0.00" rpy="0 0 0"/>
     </joint>
-
-    <xacro:ur_ros2_control
-        name="ur10e"
-        tf_prefix="$(arg tf_prefix)"
-        kinematics_parameters_file="$(arg kinematics_params)"
-        transmission_hw_interface="$(arg transmission_hw_interface)"
-  />
 
     </robot>

@@ -108,13 +108,6 @@ def generate_launch_description():
     ld = LaunchDescription()
     ld.add_entity(declare_arguments())
 
-    wait_robot_description = Node(
-        package="ur_robot_driver",
-        executable="wait_for_robot_description",
-        output="screen",
-    )
-    ld.add_action(wait_robot_description)
-
     move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
@@ -165,13 +158,8 @@ def generate_launch_description():
         ],
     )
 
-    ld.add_action(
-        RegisterEventHandler(
-            OnProcessExit(
-                target_action=wait_robot_description,
-                on_exit=[move_group_node, rviz_node, servo_node],
-            )
-        ),
-    )
+    ld.add_action(move_group_node)
+    ld.add_action(rviz_node)
+    ld.add_action(servo_node)
 
     return ld
