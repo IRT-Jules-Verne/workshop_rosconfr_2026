@@ -27,6 +27,7 @@ def launch_setup(context):
             ParameterFile(controllers_file, allow_substs=True),
         ],
         output="screen",
+        remappings=[("~/robot_description", "/robot_description")],
     )
 
 
