@@ -1,7 +1,6 @@
-# WORKSHOP ROSCON France 2025
+# WORKSHOP ROSCON France 2026
 ### WIFI
-**SSID** : ROSCON
-**Password** : Roscon2025
+TDB
 
 ### Pour windows :
 1. Installer : https://git-scm.com/install/windows
