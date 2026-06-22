@@ -1,6 +1,6 @@
 # WORKSHOP ROSCON France 2026
 ### WIFI
-TDB
+Demander à l'acceuil vos accès !
 
 ### Pour windows :
 1. Installer : https://git-scm.com/install/windows
