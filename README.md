@@ -9,7 +9,7 @@ Demander à l'acceuil vos accès !
 ### Si vous êtes en avance :
 
 1. Ouvrir un terminal avec ctrl+T
-2. git clone https://github.com/IRT-Jules-Verne/workshop_rosconfr_2025.git
+2. git clone https://github.com/IRT-Jules-Verne/workshop_rosconfr_2026.git
 3. sudo apt update
 4. Suivre les instructions : https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html (Changer en fonction de votre version Ubuntu) jusqu'à la fin de l'installation (Avant Setup Environment)
 5. sudo rosdep init
